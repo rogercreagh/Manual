@@ -50,9 +50,9 @@ document.querySelectorAll('.mod_hello').forEach(element => {
 
 ## Web Asset Manager
 
-If you're not familar with the Web Asset Manager then you should read [this manual section](../../../general-concepts/web-asset-manager.md). 
+If you're not familiar with the Web Asset Manager then you should read [this manual section](../../../general-concepts/web-asset-manager.md). 
 
-Fur our js code file we create an asset in mod_hello/media/joomla.asset.json, as described in [Web Asset Manager Definition](https://manual.joomla.org/docs/general-concepts/web-asset-manager#definition):
+For our js code file we create an asset in mod_hello/media/joomla.asset.json, as described in [Web Asset Manager Definition](https://manual.joomla.org/docs/general-concepts/web-asset-manager#definition):
 
 ```json title="mod_hello/media/joomla.asset.json"
 {
@@ -85,7 +85,7 @@ The Web Asset Manager doesn't automatically read the joomla.asset.json files of 
 Then we need to tell it that we want to use the "mod_hello.add-suffix" asset, so that our js file gets included in the HTTP response:
 
 ```php
-$document = $app->getDocument();
+$document = $this->app->getDocument();
 $wa = $document->getWebAssetManager();
 $wa->getRegistry()->addExtensionRegistryFile('mod_hello');
 $wa->useScript('mod_hello.add-suffix');
@@ -102,7 +102,7 @@ Our updated tmpl file is:
 defined('_JEXEC') or die;
 
 // highlight-start
-$document = $app->getDocument();
+$document = $this->app->getDocument();
 $wa = $document->getWebAssetManager();
 $wa->getRegistry()->addExtensionRegistryFile('mod_hello');
 $wa->useScript('mod_hello.add-suffix');
@@ -195,3 +195,5 @@ You can use the Web Asset Manager to add CSS files in a similar manner. For a fi
 ```php
 $wa->useStyle('mod_hello.example');
 ```
+
+

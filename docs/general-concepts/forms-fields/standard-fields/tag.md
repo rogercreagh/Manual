@@ -3,7 +3,9 @@ sidebar_position: 2
 title: Tag Form Field
 ---
 
-The **tag** form field type provides a point where you can enter tags - this is either AJAX or nested.
+The **tag** form field type provides a point where you can enter tags in either AJAX or Nested mode.
+
+## Attributes
 
 - **type** (mandatory) must be *tag*.
 - **name** (mandatory) is the unique name of the field.
@@ -20,7 +22,7 @@ The **tag** form field type provides a point where you can enter tags - this is 
 
 You can see the difference between "ajax" mode and "nested" mode by setting the Global Configuration / Tags / Data Entry and then entering data into the Tags field of an existing article.
 
-**Ajax mode** 
+### Ajax mode
 
 - The field searches tags (via Ajax) while the user types them in the tag field.
 - Three min characters are required to launch the first background AJAX search. This value is set in com_tags Options|Item Selection|Minimum Search Length
@@ -28,7 +30,7 @@ You can see the difference between "ajax" mode and "nested" mode by setting the 
 - All the new custom tags inserted in the field are created on the fly in the database.
 - The item list is sorted with most-used tags at the top and the path (parent tags if any) is displayed with the tag name. 
 
-**Nested mode**
+### Nested mode
 
 - The tag dropdown list displays a hierarchical list of tags (shown in a similar way to how categories are shown)
 - You cannot create new tags on the fly
